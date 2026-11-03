@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>PS4 Auto HEN</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #1A1920;
+    font-family: sans-serif;
+  }
+  .center-msg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    color: red;
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: 3px 3px 6px black;
+    line-height: 1.2;
+  }
+</style>
+</head>
+<body>
+<script>
+var m = navigator.userAgent.match(/PlayStation 4[ \/]([\d.]+)/i);
+if (!m) {
+  document.body.innerHTML = "<div class='center-msg'>ONLY FOR PS4 !!!</div>";
+}
+else {
+  var fw = parseFloat(m[1]);
+  if (fw == 14.00) location.replace("1400/index.html");
+  else if (fw >= 5.05 && fw <= 13.52) location.replace("505_1352/index.html");
+  else document.body.innerHTML = "<div class='center-msg'>FW " + fw + "<br>NOT SUPPORTED !!!</div>";
+}
+</script>
+</body>
+</html>

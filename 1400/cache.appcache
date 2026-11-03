@@ -1,0 +1,17 @@
+CACHE MANIFEST
+
+index.html
+jb.html 
+launch.js
+jb.js
+core.js
+mem.js
+int64.js
+ps4_offsets.js
+afterglow.js
+patchset-1352.bin
+patchset-1400.bin
+goldhen.bin
+
+NETWORK:
+*
